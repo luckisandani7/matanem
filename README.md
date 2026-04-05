@@ -1,46 +1,44 @@
-# 👨‍💻 SandaniFX | Tech Enthusiast & Developer
+# SandaniFX Profile | The Asura Protocol Ecosystem
 
-Selamat datang di profil GitHub saya! Saya seorang developer yang berfokus pada efisiensi kode, otomatisasi, dan pengembangan solusi digital yang inovatif.
+Official profile and gateway to the **SandaniFX** ecosystem. This application serves as a central hub for advanced trading intelligence and discipline tracking tools.
 
----
+![SandaniFX Banner](https://i.postimg.cc/q7kcCfng/ec5ca2d563770515847f644e8a3123a3.jpg)
 
-### 🚀 Tentang Saya
+## 🚀 Ecosystem Overview
 
-Saya adalah seseorang yang sangat antusias dengan dunia teknologi, khususnya dalam pengembangan perangkat lunak dan analisis teknis. Nama **SandaniFX** merepresentasikan perpaduan antara identitas personal dan ketertarikan mendalam pada dinamika pasar serta eksekusi yang presisi.
+### 👹 NarakasuraAI
+**Advanced Trading Intelligence // V1.0**
+A high-performance AI-driven analysis tool designed for the modern trader. NarakasuraAI provides deep market insights and predictive analytics to stay ahead of the curve.
+- [Access NarakasuraAI](https://naraka.sandanifx.my.id)
 
-* 🔭 **Sedang mengerjakan:** Proyek optimasi sistem dan alat bantu trading otomatis.
-* 🌱 **Sedang mempelajari:** Arsitektur microservices dan integrasi AI tingkat lanjut.
-* 💬 **Tanya saya tentang:** Algoritma trading, Python, JavaScript, dan kustomisasi lingkungan kerja (OS/IDE).
-* ⚡ **Fun Fact:** Saya percaya bahwa kode yang bersih (clean code) adalah bentuk seni yang paling murni.
+### 📊 TradingApps
+**Discipline Tracking Ecosystem**
+A comprehensive journaling and discipline tracking suite. Built for traders who understand that discipline is the ultimate edge in the markets.
+- [Access TradingApps](https://app.sandanifx.my.id)
 
----
+## 🛠️ Tech Stack
 
-### 🛠️ Keahlian & Teknologi
+- **Frontend:** React 18 + Vite
+- **Styling:** Tailwind CSS (Utility-first CSS)
+- **Animations:** Framer Motion (Smooth transitions & interactive effects)
+- **Icons:** Lucide React & Custom Assets
+- **Deployment:** Cloud Run / Vercel / GitHub Pages
 
-| Bidang | Teknologi |
-| :--- | :--- |
-| **Languages** | Python, JavaScript, TypeScript, C++ |
-| **Frameworks** | React, Node.js, FastAPI |
-| **Tools** | Git, Docker, MetaTrader (MQL4/5), VS Code |
-| **Database** | PostgreSQL, MongoDB, Redis |
+## 🌐 SEO & Metadata
 
----
+This project is optimized for search engines with:
+- Custom Meta Tags (Description, Keywords)
+- Open Graph (OG) support for social media sharing
+- Robots.txt & Sitemap.xml for better indexing
+- Custom Favicon branding
 
-### 📊 Statistik GitHub
+## 📱 Connect with SandaniFX
 
-![Statistik SandaniFX](https://github-readme-stats.vercel.app/api?username=SandaniFX&show_icons=true&theme=tokyonight)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=SandaniFX&layout=compact&theme=tokyonight)
-
----
-
-### 📫 Hubungi Saya
-
-Mari berkolaborasi atau sekadar berdiskusi tentang teknologi:
-
-* **Email:** [kontak@sandanifx.com](mailto:your-email@example.com)
-* **LinkedIn:** [linkedin.com/in/sandanifx](https://linkedin.com/in/username)
-* **Instagram:** [@SandaniFX](https://instagram.com/username)
+Stay updated with the latest developments in the Asura Protocol:
+- **Telegram:** [Join Channel](https://t.me/sandanifx)
+- **Instagram:** [@sandanifx](https://instagram.com/sandanifx)
+- **Support:** [Contact via Telegram](https://t.me/sandanifx_support)
 
 ---
 
-> "Logic will get you from A to B. Imagination will take you everywhere." – Albert Einstein
+*"In the realm of trading, only the disciplined survive. The rest are just liquidity for the Asuras."*
