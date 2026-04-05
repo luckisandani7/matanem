@@ -10,79 +10,91 @@ import {
   Send,
   MessageSquare,
   Instagram,
-  TrendingUp,
   CandlestickChart
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
-const NavLink = ({ href, title, subtitle, icon: Icon }: { href: string; title: React.ReactNode; subtitle: string; icon: any }) => (
-  <motion.a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    whileHover={{ scale: 1.02, x: 10 }}
-    whileTap={{ scale: 0.98 }}
-    className="group relative flex items-center gap-6 p-6 bg-black/40 border-l-4 border-white/5 hover:border-brand-red bg-[linear-gradient(45deg,rgba(255,0,0,0.02)_0%,transparent_100%)] hover:bg-[linear-gradient(45deg,rgba(255,0,0,0.05)_0%,transparent_100%)] transition-all duration-500 rounded-r-xl overflow-hidden shadow-2xl"
-  >
-    {/* Animated Background Glow */}
-    <div className="absolute inset-0 bg-gradient-to-r from-brand-red/0 via-brand-red/5 to-brand-red/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-    
-    {/* Icon Container */}
-    <motion.div 
-      whileHover={{ rotate: [0, -5, 5, 0] }}
-      transition={{ duration: 0.4 }}
-      className="relative z-10 w-16 h-16 flex items-center justify-center rounded-lg bg-black/60 border border-white/10 group-hover:border-brand-red/60 group-hover:bg-brand-red/10 transition-all duration-700 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)]"
+const NavLink = ({ href, title, subtitle, icon: Icon }: { href: string; title: React.ReactNode; subtitle: string; icon: any }) => {
+  const isImageUrl = typeof Icon === 'string';
+
+  return (
+    <motion.a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.02, x: 10 }}
+      whileTap={{ scale: 0.98 }}
+      className="group relative flex items-center gap-6 p-6 bg-black/40 border-l-4 border-white/5 hover:border-brand-red bg-[linear-gradient(45deg,rgba(255,0,0,0.02)_0%,transparent_100%)] hover:bg-[linear-gradient(45deg,rgba(255,0,0,0.05)_0%,transparent_100%)] transition-all duration-500 rounded-r-xl overflow-hidden shadow-2xl"
     >
-      <motion.div
-        animate={{ 
-          filter: ["drop-shadow(0 0 0px rgba(255,0,0,0))", "drop-shadow(0 0 10px rgba(255,0,0,0.6))", "drop-shadow(0 0 0px rgba(255,0,0,0))"],
-          scale: [1, 1.1, 1]
-        }}
-        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-        className="relative z-20"
+      {/* Animated Background Glow */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brand-red/0 via-brand-red/5 to-brand-red/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+      
+      {/* Icon Container */}
+      <motion.div 
+        whileHover={{ rotate: [0, -5, 5, 0] }}
+        transition={{ duration: 0.4 }}
+        className="relative z-10 w-16 h-16 flex items-center justify-center rounded-lg bg-black/60 border border-white/10 group-hover:border-brand-red/60 group-hover:bg-brand-red/10 transition-all duration-700 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)]"
       >
-        <Icon className="w-8 h-8 text-gray-500 group-hover:text-brand-red transition-all duration-500" />
+        <motion.div
+          animate={{ 
+            filter: ["drop-shadow(0 0 0px rgba(255,0,0,0))", "drop-shadow(0 0 10px rgba(255,0,0,0.6))", "drop-shadow(0 0 0px rgba(255,0,0,0))"],
+            scale: [1, 1.1, 1]
+          }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          className="relative z-20 flex items-center justify-center"
+        >
+          {isImageUrl ? (
+            <img 
+              src={Icon} 
+              alt="" 
+              className="w-8 h-8 object-contain opacity-50 group-hover:opacity-100 group-hover:brightness-125 transition-all duration-500"
+              referrerPolicy="no-referrer"
+            />
+          ) : (
+            <Icon className="w-8 h-8 text-gray-500 group-hover:text-brand-red transition-all duration-500" />
+          )}
+        </motion.div>
+        
+        {/* Corner Accents - More Aggressive with Pulse */}
+        <motion.div 
+          animate={{ opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 2, repeat: Infinity }}
+          className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-brand-red/0 group-hover:border-brand-red transition-all duration-500 group-hover:w-6 group-hover:h-6" 
+        />
+        <motion.div 
+          animate={{ opacity: [0.3, 1, 0.3] }}
+          transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+          className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-brand-red/0 group-hover:border-brand-red transition-all duration-500 group-hover:w-6 group-hover:h-6" 
+        />
+        
+        {/* Hexagon-like Inner Glow */}
+        <div className="absolute inset-0 bg-brand-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.1)_0%,transparent_70%)]" />
+        </div>
       </motion.div>
-      
-      {/* Corner Accents - More Aggressive with Pulse */}
-      <motion.div 
-        animate={{ opacity: [0.3, 1, 0.3] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute -top-1.5 -left-1.5 w-4 h-4 border-t-2 border-l-2 border-brand-red/0 group-hover:border-brand-red transition-all duration-500 group-hover:w-6 group-hover:h-6" 
-      />
-      <motion.div 
-        animate={{ opacity: [0.3, 1, 0.3] }}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-        className="absolute -bottom-1.5 -right-1.5 w-4 h-4 border-b-2 border-r-2 border-brand-red/0 group-hover:border-brand-red transition-all duration-500 group-hover:w-6 group-hover:h-6" 
-      />
-      
-      {/* Hexagon-like Inner Glow */}
-      <div className="absolute inset-0 bg-brand-red/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 rounded-lg overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.1)_0%,transparent_70%)]" />
+
+      {/* Text Content */}
+      <div className="relative z-10 flex-1">
+        <div className="flex items-center gap-2 mb-1">
+          <h3 className="font-display font-black text-xl tracking-tighter uppercase group-hover:text-brand-red transition-colors">
+            {title}
+          </h3>
+          <div className="h-[1px] flex-1 bg-white/10 group-hover:bg-brand-red/30 transition-colors" />
+        </div>
+        <p className="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] group-hover:text-gray-400 transition-colors">
+          {subtitle}
+        </p>
       </div>
-    </motion.div>
 
-    {/* Text Content */}
-    <div className="relative z-10 flex-1">
-      <div className="flex items-center gap-2 mb-1">
-        <h3 className="font-display font-black text-xl tracking-tighter uppercase group-hover:text-brand-red transition-colors">
-          {title}
-        </h3>
-        <div className="h-[1px] flex-1 bg-white/10 group-hover:bg-brand-red/30 transition-colors" />
+      <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
+        <ChevronRight className="w-6 h-6 text-brand-red" />
       </div>
-      <p className="text-xs font-medium text-gray-500 uppercase tracking-[0.2em] group-hover:text-gray-400 transition-colors">
-        {subtitle}
-      </p>
-    </div>
 
-    <div className="relative z-10 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-x-4 group-hover:translate-x-0">
-      <ChevronRight className="w-6 h-6 text-brand-red" />
-    </div>
-
-    {/* Scanline Effect */}
-    <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] bg-[length:100%_4px,3px_100%] opacity-20" />
-  </motion.a>
-);
+      {/* Scanline Effect */}
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] bg-[length:100%_4px,3px_100%] opacity-20" />
+    </motion.a>
+  );
+};
 
 export default function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -231,7 +243,7 @@ export default function App() {
               href="https://naraka.sandanifx.my.id"
               title={<>Narakasura<span className="text-brand-red">AI</span></>}
               subtitle="Advanced Trading Intelligence // V1.0"
-              icon={Skull}
+              icon="https://i.postimg.cc/N0dfY0Xg/hacker.png"
             />
           </motion.div>
 
@@ -242,9 +254,9 @@ export default function App() {
           >
             <NavLink 
               href="https://app.sandanifx.my.id"
-              title={<>Trading<span className="text-brand-red">App</span></>}
+              title={<>Trading<span className="text-brand-red">Apps</span></>}
               subtitle="Discipline Tracking Ecosystem"
-              icon={CandlestickChart}
+              icon="https://i.postimg.cc/mgRHgtPT/income-statement.png"
             />
           </motion.div>
         </div>
