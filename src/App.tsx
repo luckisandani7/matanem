@@ -12,7 +12,7 @@ import {
   Instagram,
   LineChart
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <motion.a
