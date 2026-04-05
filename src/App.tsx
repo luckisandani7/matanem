@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
-const NavLink = ({ href, title, subtitle, icon: Icon }: { href: string; title: React.ReactNode; subtitle: string; icon: any }) => {
+const NavLink = ({ href, title, subtitle, icon: Icon, alt }: { href: string; title: React.ReactNode; subtitle: string; icon: any; alt: string }) => {
   const isImageUrl = typeof Icon === 'string';
 
   return (
@@ -46,7 +46,7 @@ const NavLink = ({ href, title, subtitle, icon: Icon }: { href: string; title: R
           {isImageUrl ? (
             <img 
               src={Icon} 
-              alt="" 
+              alt={alt} 
               className="w-8 h-8 object-contain opacity-50 group-hover:opacity-100 group-hover:brightness-125 transition-all duration-500"
               referrerPolicy="no-referrer"
             />
@@ -244,6 +244,7 @@ export default function App() {
               title={<>Narakasura<span className="text-brand-red">AI</span></>}
               subtitle="Advanced Trading Intelligence // V1.0"
               icon="https://i.postimg.cc/N0dfY0Xg/hacker.png"
+              alt="NarakasuraAI Hacker Icon"
             />
           </motion.div>
 
@@ -257,6 +258,7 @@ export default function App() {
               title={<>Trading<span className="text-brand-red">Apps</span></>}
               subtitle="Discipline Tracking Ecosystem"
               icon="https://i.postimg.cc/mgRHgtPT/income-statement.png"
+              alt="TradingApps Income Statement Icon"
             />
           </motion.div>
         </div>
