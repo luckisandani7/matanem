@@ -10,7 +10,9 @@ import {
   Send,
   MessageSquare,
   Instagram,
-  CandlestickChart
+  CandlestickChart,
+  Eye,
+  Target
 } from "lucide-react";
 import React, { useState, useEffect } from "react";
 
@@ -262,6 +264,117 @@ export default function App() {
             />
           </motion.div>
         </div>
+
+        {/* About Us Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="mb-24 relative"
+        >
+          <div className="absolute -inset-4 bg-brand-red/5 blur-xl rounded-3xl opacity-50" />
+          <div className="relative bg-black/40 border border-white/5 p-8 md:p-12 rounded-2xl overflow-hidden group hover:border-brand-red/30 transition-colors duration-500">
+            {/* Decorative Corner */}
+            <div className="absolute top-0 right-0 w-24 h-24 bg-brand-red/5 -rotate-45 translate-x-12 -translate-y-12" />
+            
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-[2px] bg-brand-red" />
+              <h2 className="font-display font-black text-3xl tracking-tighter uppercase text-white">
+                The <span className="text-brand-red">Asura</span> Protocol
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="space-y-6 text-gray-400 text-sm leading-relaxed font-medium">
+                <div>
+                  <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
+                    <Zap className="w-3 h-3 text-brand-red" /> Our Vision
+                  </h3>
+                  <p>
+                    <span className="text-white font-bold">SandaniFX</span> is a digital powerhouse dedicated to the evolution of modern trading. At the core of our operations lies the <span className="text-brand-red/80 italic">Asura Protocol</span>: a strategic framework that harmonizes advanced technology with the psychological fortitude of the trader. We believe that the future of finance belongs to those who can bridge the gap between human intuition and machine precision.
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
+                    <Shield className="w-3 h-3 text-brand-red" /> The Technology
+                  </h3>
+                  <p>
+                    Our ecosystem is built on two pillars of innovation. <span className="text-white">NarakasuraAI</span> utilizes sophisticated algorithms for <span className="text-white italic">financial market analysis</span> and <span className="text-white italic">predictive intelligence</span>, providing traders with an unparalleled edge in the volatile forex market. Complementing this is <span className="text-white">TradingApps</span>, our premier <span className="text-white italic">discipline tracking ecosystem</span> designed to master the most difficult aspect of trading: <span className="text-brand-red/80">Psychology</span>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="space-y-6 text-gray-400 text-sm leading-relaxed font-medium">
+                <div>
+                  <h3 className="text-white font-bold uppercase tracking-widest text-xs mb-2 flex items-center gap-2">
+                    <TrendingUp className="w-3 h-3 text-brand-red" /> The Edge
+                  </h3>
+                  <p>
+                    In an era of high-frequency trading and algorithmic dominance, <span className="text-white font-bold">SandaniFX</span> provides the infrastructure for market dominance. We focus on <span className="text-white italic">risk management strategies</span> and <span className="text-white italic">automated trading solutions</span> that allow our users to navigate global markets with confidence. Whether you are a retail trader or an institutional player, our tools are engineered for performance.
+                  </p>
+                </div>
+
+                <div className="bg-white/5 p-4 rounded-lg border border-white/10">
+                  <p className="text-xs text-gray-400 italic leading-relaxed">
+                    "Founded on the belief that <span className="text-brand-red font-bold">discipline is the ultimate edge</span>, SandaniFX continues to push the boundaries of what is possible. We provide the data, the tools, and the framework; you provide the execution."
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* SEO Keywords Hidden (Visually) but readable by Crawlers */}
+            <div className="sr-only">
+              Best forex trading tools, AI trading signals, trading journal software, forex risk management, SandaniFX official, NarakasuraAI bot, trading discipline app, Asura Protocol trading strategy, financial market analysis 2024.
+            </div>
+
+            {/* Background Scanline for the box */}
+            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.05)_50%)] bg-[length:100%_4px] opacity-20" />
+          </div>
+        </motion.section>
+
+        {/* Vision & Mission Section */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+          className="mb-24 grid md:grid-cols-2 gap-6"
+        >
+          <div className="relative group p-8 bg-black/40 border border-white/5 rounded-2xl hover:border-brand-red/30 transition-all duration-500">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-lg bg-brand-red/10 border border-brand-red/20">
+                <Eye className="w-6 h-6 text-brand-red" />
+              </div>
+              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Visi</h2>
+            </div>
+            <p className="text-gray-400 text-sm leading-relaxed font-medium">
+              Menjadi ekosistem digital terdepan yang merevolusi cara trader berinteraksi dengan pasar keuangan melalui integrasi teknologi kecerdasan buatan dan penguatan psikologi trading yang tak tergoyahkan.
+            </p>
+          </div>
+
+          <div className="relative group p-8 bg-black/40 border border-white/5 rounded-2xl hover:border-brand-red/30 transition-all duration-500">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-lg bg-brand-red/10 border border-brand-red/20">
+                <Target className="w-6 h-6 text-brand-red" />
+              </div>
+              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Misi</h2>
+            </div>
+            <ul className="space-y-3 text-gray-400 text-sm leading-relaxed font-medium">
+              <li className="flex gap-3">
+                <span className="text-brand-red font-bold">01</span>
+                <span>Mengembangkan alat analisis berbasis AI yang presisi untuk memberikan keunggulan kompetitif bagi setiap trader dalam ekosistem SandaniFX.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-brand-red font-bold">02</span>
+                <span>Membangun infrastruktur pelacakan disiplin yang membantu trader menguasai emosi dan konsistensi dalam pengambilan keputusan.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-brand-red font-bold">03</span>
+                <span>Menciptakan komunitas trading yang berfokus pada pertumbuhan berkelanjutan dan manajemen risiko yang ketat.</span>
+              </li>
+            </ul>
+          </div>
+        </motion.section>
 
         {/* Footer Quote */}
         <motion.div
