@@ -345,10 +345,10 @@ export default function App() {
               <div className="p-3 rounded-lg bg-brand-red/10 border border-brand-red/20">
                 <Eye className="w-6 h-6 text-brand-red" />
               </div>
-              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Visi</h2>
+              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Vision</h2>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-              Menjadi ekosistem digital terdepan yang merevolusi cara trader berinteraksi dengan pasar keuangan melalui integrasi teknologi kecerdasan buatan dan penguatan psikologi trading yang tak tergoyahkan.
+              To be the leading digital ecosystem revolutionizing how traders interact with financial markets through the integration of artificial intelligence and unshakable trading psychology.
             </p>
           </div>
 
@@ -357,20 +357,20 @@ export default function App() {
               <div className="p-3 rounded-lg bg-brand-red/10 border border-brand-red/20">
                 <Target className="w-6 h-6 text-brand-red" />
               </div>
-              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Misi</h2>
+              <h2 className="font-display font-black text-xl tracking-tighter uppercase text-white">Mission</h2>
             </div>
             <ul className="space-y-3 text-gray-400 text-sm leading-relaxed font-medium">
               <li className="flex gap-3">
                 <span className="text-brand-red font-bold">01</span>
-                <span>Mengembangkan alat analisis berbasis AI yang presisi untuk memberikan keunggulan kompetitif bagi setiap trader dalam ekosistem SandaniFX.</span>
+                <span>Develop precision AI-based analytical tools to provide a competitive edge for every trader within the SandaniFX ecosystem.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-brand-red font-bold">02</span>
-                <span>Membangun infrastruktur pelacakan disiplin yang membantu trader menguasai emosi dan konsistensi dalam pengambilan keputusan.</span>
+                <span>Build a discipline tracking infrastructure that helps traders master their emotions and maintain consistency in decision-making.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-brand-red font-bold">03</span>
-                <span>Menciptakan komunitas trading yang berfokus pada pertumbuhan berkelanjutan dan manajemen risiko yang ketat.</span>
+                <span>Create a trading community focused on sustainable growth and rigorous risk management.</span>
               </li>
             </ul>
           </div>
